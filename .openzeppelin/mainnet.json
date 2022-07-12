@@ -105,6 +105,11 @@
       "address": "0x03323143a5f0D0679026C2a9fB6b0391e4D64811",
       "txHash": "0xf4580af17bfdc95b9777fa581870c41df4935da7d1abc39841bfe8d76d56d302",
       "kind": "transparent"
+    },
+    {
+      "address": "0x3216D2A52f0094AA860ca090BC5C335dE36e6273",
+      "txHash": "0xff8644540f7fe13f497a31b5a3eefca4157ff555938e1211d1b21eeb70a2dc89",
+      "kind": "transparent"
     }
   ],
   "impls": {
@@ -3878,6 +3883,134 @@
                 "type": "t_bool"
               }
             ]
+          }
+        }
+      }
+    },
+    "71f7cee26c3006403df27865152c06906041f6a702479b8c7f791a7d0fa2ed63": {
+      "address": "0x52552AD9c9EC7Eb64D53c5aa518B76759F17CC11",
+      "txHash": "0xe96fdbed8303a8779c00e65b28b3d35a3de3a94e263e66ad9874d81a68153461",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "_initialized",
+            "type": "t_bool",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:39"
+          },
+          {
+            "contract": "Initializable",
+            "label": "_initializing",
+            "type": "t_bool",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:44"
+          },
+          {
+            "contract": "ContextUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:31"
+          },
+          {
+            "contract": "OwnableUpgradeable",
+            "label": "_owner",
+            "type": "t_address",
+            "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:22"
+          },
+          {
+            "contract": "OwnableUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)49_storage",
+            "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:82"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]"
+          },
+          "t_bool": {
+            "label": "bool"
+          }
+        }
+      }
+    },
+    "b88825f9339c958e8af3b7ac46f67b8219dfc418b5452522591a3680d7c54faf": {
+      "address": "0x9DEBb18948639604C99FEc2Afa0E5316184C61BE",
+      "txHash": "0x40156300599814252ff55c89b8fe5b37fc9d804966430c35e6fbe014b5fb5879",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "_initialized",
+            "type": "t_bool",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:39"
+          },
+          {
+            "contract": "Initializable",
+            "label": "_initializing",
+            "type": "t_bool",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:44"
+          },
+          {
+            "contract": "ContextUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:31"
+          },
+          {
+            "contract": "OwnableUpgradeable",
+            "label": "_owner",
+            "type": "t_address",
+            "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:22"
+          },
+          {
+            "contract": "OwnableUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)49_storage",
+            "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:82"
+          },
+          {
+            "contract": "SDTController",
+            "label": "delegateRegistry",
+            "type": "t_address",
+            "src": "contracts/SDTController.sol:17"
+          },
+          {
+            "contract": "SDTController",
+            "label": "rewardDistributor",
+            "type": "t_address",
+            "src": "contracts/SDTController.sol:18"
+          },
+          {
+            "contract": "SDTController",
+            "label": "rewardToken",
+            "type": "t_address",
+            "src": "contracts/SDTController.sol:19"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]"
+          },
+          "t_bool": {
+            "label": "bool"
           }
         }
       }
