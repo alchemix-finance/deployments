@@ -1,0 +1,451 @@
+{
+  "address": "0xfa6A5D33e18CB0d52991536ab15750fB13119E45",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "alchemist",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "curvePool",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "minter",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "token",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "parentToken",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "underlyingToken",
+              "type": "address"
+            },
+            {
+              "internalType": "uint128",
+              "name": "curvePoolEthIndex",
+              "type": "uint128"
+            },
+            {
+              "internalType": "uint128",
+              "name": "curvePoolfrxEthIndex",
+              "type": "uint128"
+            }
+          ],
+          "internalType": "struct InitializationParams",
+          "name": "params",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "target",
+          "type": "address"
+        },
+        {
+          "internalType": "bool",
+          "name": "success",
+          "type": "bool"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "ERC20CallFailed",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "message",
+          "type": "string"
+        }
+      ],
+      "name": "IllegalState",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "message",
+          "type": "string"
+        }
+      ],
+      "name": "Unauthorized",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "alchemist",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "curvePool",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "curvePoolEthIndex",
+      "outputs": [
+        {
+          "internalType": "uint128",
+          "name": "",
+          "type": "uint128"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "curvePoolfrxEthIndex",
+      "outputs": [
+        {
+          "internalType": "uint128",
+          "name": "",
+          "type": "uint128"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "minter",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "parentToken",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "price",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "token",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "underlyingToken",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "recipient",
+          "type": "address"
+        }
+      ],
+      "name": "unwrap",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "version",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "recipient",
+          "type": "address"
+        }
+      ],
+      "name": "wrap",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "stateMutability": "payable",
+      "type": "receive"
+    }
+  ],
+  "transactionHash": "0x3fe7039b8688e2bb25fba9c988f883d6c0627aedd17421b64c6f8d19ddebe402",
+  "receipt": {
+    "to": null,
+    "from": "0x7a6468F8161ef39d7639c67DfA5637BA1b7ba74B",
+    "contractAddress": "0xfa6A5D33e18CB0d52991536ab15750fB13119E45",
+    "transactionIndex": 8,
+    "gasUsed": "1185141",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x0ea00868a497951163aa683b020869eb83afb6c9791e5616bbd18c8b950fb9b4",
+    "transactionHash": "0x3fe7039b8688e2bb25fba9c988f883d6c0627aedd17421b64c6f8d19ddebe402",
+    "logs": [],
+    "blockNumber": 16789371,
+    "cumulativeGasUsed": "2992215",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    {
+      "alchemist": "0x062Bf725dC4cDF947aa79Ca2aaCCD4F385b13b5c",
+      "curvePool": "0xa1F8A6807c402E4A15ef4EBa36528A3FED24E577",
+      "curvePoolEthIndex": 0,
+      "curvePoolfrxEthIndex": 1,
+      "minter": "0xbAFA44EFE7901E04E39Dad13167D089C559c1138",
+      "token": "0xac3E018457B222d93114458476f3E3416Abbe38F",
+      "parentToken": "0x5E8422345238F34275888049021821E8E08CAa1f",
+      "underlyingToken": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+    }
+  ],
+  "solcInputHash": "a88ccb5c64333df399bcd00bfc442778",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.13+commit.abaa5c0e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"alchemist\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"curvePool\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"minter\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"parentToken\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"underlyingToken\",\"type\":\"address\"},{\"internalType\":\"uint128\",\"name\":\"curvePoolEthIndex\",\"type\":\"uint128\"},{\"internalType\":\"uint128\",\"name\":\"curvePoolfrxEthIndex\",\"type\":\"uint128\"}],\"internalType\":\"struct InitializationParams\",\"name\":\"params\",\"type\":\"tuple\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"target\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"success\",\"type\":\"bool\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"ERC20CallFailed\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"message\",\"type\":\"string\"}],\"name\":\"IllegalState\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"message\",\"type\":\"string\"}],\"name\":\"Unauthorized\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"alchemist\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"curvePool\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"curvePoolEthIndex\",\"outputs\":[{\"internalType\":\"uint128\",\"name\":\"\",\"type\":\"uint128\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"curvePoolfrxEthIndex\",\"outputs\":[{\"internalType\":\"uint128\",\"name\":\"\",\"type\":\"uint128\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"minter\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"parentToken\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"price\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"token\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"underlyingToken\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"}],\"name\":\"unwrap\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"version\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"}],\"name\":\"wrap\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"stateMutability\":\"payable\",\"type\":\"receive\"}],\"devdoc\":{\"author\":\"Alchemix Finance\",\"errors\":{\"ERC20CallFailed(address,bool,bytes)\":[{\"params\":{\"data\":\"The resulting data from the call. This is error data when the call was not a success. Otherwise,                this is malformed data when the call was a success.\",\"success\":\"If the call to the token was a success.\",\"target\":\"The target address.\"}}],\"IllegalState(string)\":[{\"params\":{\"message\":\"The error message.\"}}],\"Unauthorized(string)\":[{\"params\":{\"message\":\"The error message.\"}}]},\"kind\":\"dev\",\"methods\":{\"price()\":{\"returns\":{\"_0\":\"The price.\"}},\"unwrap(uint256,address)\":{\"params\":{\"amount\":\"The amount of yield-tokens to redeem.\",\"recipient\":\"The recipient of the resulting underlying-tokens.\"},\"returns\":{\"_0\":\"The amount of underlying tokens unwrapped to `recipient`.\"}},\"wrap(uint256,address)\":{\"params\":{\"amount\":\"The amount of the underlying token to wrap.\",\"recipient\":\"The address which will receive the yield tokens.\"},\"returns\":{\"_0\":\"The amount of yield tokens minted to `recipient`.\"}}},\"stateVariables\":{\"token\":{\"return\":\"The address of the yield token.\",\"returns\":{\"_0\":\"The address of the yield token.\"}},\"underlyingToken\":{\"return\":\"The address of the underlying token.\",\"returns\":{\"_0\":\"The address of the underlying token.\"}},\"version\":{\"return\":\"The version.\",\"returns\":{\"_0\":\"The version.\"}}},\"title\":\"FraxEthAdapter\",\"version\":1},\"userdoc\":{\"errors\":{\"ERC20CallFailed(address,bool,bytes)\":[{\"notice\":\"An error used to indicate that a call to an ERC20 contract failed.\"}],\"IllegalState(string)\":[{\"notice\":\"An error used to indicate that a function has encountered an unrecoverable state.\"}],\"Unauthorized(string)\":[{\"notice\":\"An error used to indicate that a message sender tried to execute a privileged function.\"}]},\"kind\":\"user\",\"methods\":{\"price()\":{\"notice\":\"Gets the number of underlying tokens that a single whole yield token is redeemable         for.\"},\"token()\":{\"notice\":\"Gets the address of the yield token that this adapter supports.\"},\"underlyingToken()\":{\"notice\":\"Gets the address of the underlying token that the yield token wraps.\"},\"unwrap(uint256,address)\":{\"notice\":\"Unwraps `amount` yield tokens into the underlying token.\"},\"version()\":{\"notice\":\"Gets the current version.\"},\"wrap(uint256,address)\":{\"notice\":\"Wraps `amount` underlying tokens into the yield token.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"submodules/v2-foundry/src/adapters/frax/FraxEthAdapter.sol\":\"FraxEthAdapter\"},\"evmVersion\":\"london\",\"libraries\":{\":__CACHE_BREAKER__\":\"0x0000000000000031363738333439333238363635\"},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"submodules/v2-foundry/lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts (last updated v4.6.0) (token/ERC20/IERC20.sol)\\n\\npragma solidity ^0.8.0;\\n\\n/**\\n * @dev Interface of the ERC20 standard as defined in the EIP.\\n */\\ninterface IERC20 {\\n    /**\\n     * @dev Emitted when `value` tokens are moved from one account (`from`) to\\n     * another (`to`).\\n     *\\n     * Note that `value` may be zero.\\n     */\\n    event Transfer(address indexed from, address indexed to, uint256 value);\\n\\n    /**\\n     * @dev Emitted when the allowance of a `spender` for an `owner` is set by\\n     * a call to {approve}. `value` is the new allowance.\\n     */\\n    event Approval(address indexed owner, address indexed spender, uint256 value);\\n\\n    /**\\n     * @dev Returns the amount of tokens in existence.\\n     */\\n    function totalSupply() external view returns (uint256);\\n\\n    /**\\n     * @dev Returns the amount of tokens owned by `account`.\\n     */\\n    function balanceOf(address account) external view returns (uint256);\\n\\n    /**\\n     * @dev Moves `amount` tokens from the caller's account to `to`.\\n     *\\n     * Returns a boolean value indicating whether the operation succeeded.\\n     *\\n     * Emits a {Transfer} event.\\n     */\\n    function transfer(address to, uint256 amount) external returns (bool);\\n\\n    /**\\n     * @dev Returns the remaining number of tokens that `spender` will be\\n     * allowed to spend on behalf of `owner` through {transferFrom}. This is\\n     * zero by default.\\n     *\\n     * This value changes when {approve} or {transferFrom} are called.\\n     */\\n    function allowance(address owner, address spender) external view returns (uint256);\\n\\n    /**\\n     * @dev Sets `amount` as the allowance of `spender` over the caller's tokens.\\n     *\\n     * Returns a boolean value indicating whether the operation succeeded.\\n     *\\n     * IMPORTANT: Beware that changing an allowance with this method brings the risk\\n     * that someone may use both the old and the new allowance by unfortunate\\n     * transaction ordering. One possible solution to mitigate this race\\n     * condition is to first reduce the spender's allowance to 0 and set the\\n     * desired value afterwards:\\n     * https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729\\n     *\\n     * Emits an {Approval} event.\\n     */\\n    function approve(address spender, uint256 amount) external returns (bool);\\n\\n    /**\\n     * @dev Moves `amount` tokens from `from` to `to` using the\\n     * allowance mechanism. `amount` is then deducted from the caller's\\n     * allowance.\\n     *\\n     * Returns a boolean value indicating whether the operation succeeded.\\n     *\\n     * Emits a {Transfer} event.\\n     */\\n    function transferFrom(\\n        address from,\\n        address to,\\n        uint256 amount\\n    ) external returns (bool);\\n}\\n\",\"keccak256\":\"0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b\",\"license\":\"MIT\"},\"submodules/v2-foundry/lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Metadata.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts v4.4.1 (token/ERC20/extensions/IERC20Metadata.sol)\\n\\npragma solidity ^0.8.0;\\n\\nimport \\\"../IERC20.sol\\\";\\n\\n/**\\n * @dev Interface for the optional metadata functions from the ERC20 standard.\\n *\\n * _Available since v4.1._\\n */\\ninterface IERC20Metadata is IERC20 {\\n    /**\\n     * @dev Returns the name of the token.\\n     */\\n    function name() external view returns (string memory);\\n\\n    /**\\n     * @dev Returns the symbol of the token.\\n     */\\n    function symbol() external view returns (string memory);\\n\\n    /**\\n     * @dev Returns the decimals places of the token.\\n     */\\n    function decimals() external view returns (uint8);\\n}\\n\",\"keccak256\":\"0x8de418a5503946cabe331f35fe242d3201a73f67f77aaeb7110acb1f30423aca\",\"license\":\"MIT\"},\"submodules/v2-foundry/src/adapters/frax/FraxEthAdapter.sol\":{\"content\":\"pragma solidity ^0.8.13;\\n\\nimport {IllegalState} from \\\"../../base/Errors.sol\\\";\\nimport {IllegalArgument, Unauthorized} from \\\"../../base/ErrorMessages.sol\\\";\\n\\n\\nimport {IFraxMinter} from \\\"../../interfaces/external/frax/IFraxMinter.sol\\\";\\nimport {IFraxEth} from \\\"../../interfaces/external/frax/IFraxEth.sol\\\";\\nimport {IStakedFraxEth} from \\\"../../interfaces/external/frax/IStakedFraxEth.sol\\\";\\nimport {IStableSwap2Pool} from \\\"../../interfaces/external/curve/IStableSwap2Pool.sol\\\";\\nimport {ITokenAdapter} from \\\"../../interfaces/ITokenAdapter.sol\\\";\\nimport {IWETH9} from \\\"../../interfaces/external/IWETH9.sol\\\";\\n\\nimport {MutexLock} from \\\"../../base/MutexLock.sol\\\";\\n\\nimport \\\"../../libraries/TokenUtils.sol\\\";\\n\\nstruct InitializationParams {\\n    address alchemist;\\n    address curvePool;\\n    address minter;\\n    address token;\\n    address parentToken;\\n    address underlyingToken;\\n    uint128 curvePoolEthIndex;\\n    uint128 curvePoolfrxEthIndex;\\n}\\n\\n/// @title  FraxEthAdapter\\n/// @author Alchemix Finance\\ncontract FraxEthAdapter is ITokenAdapter, MutexLock {\\n    uint256 private constant MAXIMUM_SLIPPAGE = 10000;\\n    string public constant override version = \\\"1.0.0\\\";\\n\\n    address public immutable alchemist;\\n    address public immutable curvePool;\\n    address public immutable minter;\\n    address public immutable override token;\\n    address public immutable parentToken;\\n    address public immutable override underlyingToken;\\n    uint128 public immutable curvePoolEthIndex;\\n    uint128 public immutable curvePoolfrxEthIndex;\\n\\n    constructor(InitializationParams memory params) {\\n        alchemist = params.alchemist;\\n        curvePool = params.curvePool;\\n        curvePoolEthIndex = params.curvePoolEthIndex;\\n        curvePoolfrxEthIndex = params.curvePoolfrxEthIndex;\\n        minter = params.minter;\\n        token = params.token;\\n        parentToken = params.parentToken;\\n        underlyingToken = params.underlyingToken;\\n    }\\n\\n    /// @dev Checks that the message sender is the alchemist that the adapter is bound to.\\n    modifier onlyAlchemist() {\\n        if (msg.sender != alchemist) {\\n            revert Unauthorized(\\\"Not alchemist\\\");\\n        }\\n        _;\\n    }\\n\\n    receive() external payable {\\n        if (msg.sender != underlyingToken && msg.sender != curvePool) {\\n            revert Unauthorized(\\\"Payments only permitted from WETH or curve pool\\\");\\n        }\\n    }\\n\\n    /// @inheritdoc ITokenAdapter\\n    function price() external view override returns (uint256) {\\n        return IStakedFraxEth(token).convertToAssets(1e18);\\n    }\\n\\n    /// @inheritdoc ITokenAdapter\\n    function wrap(uint256 amount, address recipient) external lock onlyAlchemist returns (uint256) {\\n        TokenUtils.safeTransferFrom(underlyingToken, msg.sender, address(this), amount);\\n\\n        // Unwrap the WETH into ETH.\\n        IWETH9(underlyingToken).withdraw(amount);\\n\\n        // Mint frxEth.\\n        uint256 startingFraxEthBalance = IERC20(parentToken).balanceOf(address(this));\\n        IFraxMinter(minter).submit{value: amount}();\\n        uint256 mintedFraxEth = IERC20(parentToken).balanceOf(address(this)) - startingFraxEthBalance;\\n\\n        TokenUtils.safeApprove(parentToken, token, mintedFraxEth);\\n        return IStakedFraxEth(token).deposit(mintedFraxEth, recipient);\\n    }\\n\\n    /// @inheritdoc ITokenAdapter\\n    function unwrap(uint256 amount, address recipient) external lock onlyAlchemist returns (uint256) {\\n        TokenUtils.safeTransferFrom(token, msg.sender, address(this), amount);\\n\\n        // Withdraw frxEth from  sfrxEth.\\n        uint256 startingFraxEthBalance = IERC20(parentToken).balanceOf(address(this));\\n        IStakedFraxEth(token).withdraw(amount * this.price() / 10**TokenUtils.expectDecimals(token), address(this), address(this));\\n        uint256 withdrawnFraxEth = IERC20(parentToken).balanceOf(address(this)) - startingFraxEthBalance;\\n\\n        // Swap frxEth for eth in curve.\\n        TokenUtils.safeApprove(parentToken, curvePool, withdrawnFraxEth);\\n        uint256 received = IStableSwap2Pool(curvePool).exchange(\\n            int128(uint128(curvePoolfrxEthIndex)),\\n            int128(uint128(curvePoolEthIndex)),\\n            withdrawnFraxEth,\\n            0                                // <- Slippage is handled upstream\\n        );\\n\\n        // Wrap the ETH that we received from the exchange.\\n        IWETH9(underlyingToken).deposit{value: received}();\\n\\n        // Transfer the tokens to the recipient.\\n        TokenUtils.safeTransfer(underlyingToken, recipient, received);\\n\\n        return received;\\n    }\\n}\",\"keccak256\":\"0xa2b0775c902f3d4696756b28b3e87f2fdb7097859f92c3481648f01b2a536def\"},\"submodules/v2-foundry/src/base/ErrorMessages.sol\":{\"content\":\"// SPDX-License-Identifier: UNLICENSED\\npragma solidity >=0.8.4;\\n\\n/// @notice An error used to indicate that an argument passed to a function is illegal or\\n///         inappropriate.\\n///\\n/// @param message The error message.\\nerror IllegalArgument(string message);\\n\\n/// @notice An error used to indicate that a function has encountered an unrecoverable state.\\n///\\n/// @param message The error message.\\nerror IllegalState(string message);\\n\\n/// @notice An error used to indicate that an operation is unsupported.\\n///\\n/// @param message The error message.\\nerror UnsupportedOperation(string message);\\n\\n/// @notice An error used to indicate that a message sender tried to execute a privileged function.\\n///\\n/// @param message The error message.\\nerror Unauthorized(string message);\",\"keccak256\":\"0x302087c36048c360cbd3192e41344d8705d7a50fdb97c8b77d45a5ff503dd264\",\"license\":\"UNLICENSED\"},\"submodules/v2-foundry/src/base/Errors.sol\":{\"content\":\"pragma solidity ^0.8.13;\\n\\n/// @notice An error used to indicate that an action could not be completed because either the `msg.sender` or\\n///         `msg.origin` is not authorized.\\nerror Unauthorized();\\n\\n/// @notice An error used to indicate that an action could not be completed because the contract either already existed\\n///         or entered an illegal condition which is not recoverable from.\\nerror IllegalState();\\n\\n/// @notice An error used to indicate that an action could not be completed because of an illegal argument was passed\\n///         to the function.\\nerror IllegalArgument();\",\"keccak256\":\"0x58701ccc9e168980b4177b18f902461ce61d3b8ad3aae29e55a1797f35949687\"},\"submodules/v2-foundry/src/base/MutexLock.sol\":{\"content\":\"// SPDX-License-Identifier: GPL-2.0-or-later\\npragma solidity 0.8.13;\\n\\nimport {IllegalState} from \\\"./ErrorMessages.sol\\\";\\n\\n/// @title  Mutex\\n/// @author Alchemix Finance\\n///\\n/// @notice Provides a mutual exclusion lock for implementing contracts.\\nabstract contract MutexLock {\\n    enum State {\\n        RESERVED,\\n        UNLOCKED,\\n        LOCKED\\n    }\\n\\n    /// @notice The lock state.\\n    State private _lockState = State.UNLOCKED;\\n\\n    /// @dev A modifier which acquires the mutex.\\n    modifier lock() {\\n        _claimLock();\\n\\n        _;\\n\\n        _freeLock();\\n    }\\n\\n    /// @dev Gets if the mutex is locked.\\n    ///\\n    /// @return if the mutex is locked.\\n    function _isLocked() internal view returns (bool) {\\n        return _lockState == State.LOCKED;\\n    }\\n\\n    /// @dev Claims the lock. If the lock is already claimed, then this will revert.\\n    function _claimLock() internal {\\n        // Check that the lock has not been claimed yet.\\n        if (_lockState != State.UNLOCKED) {\\n            revert IllegalState(\\\"Lock already claimed\\\");\\n        }\\n\\n        // Claim the lock.\\n        _lockState = State.LOCKED;\\n    }\\n\\n    /// @dev Frees the lock.\\n    function _freeLock() internal {\\n        _lockState = State.UNLOCKED;\\n    }\\n}\",\"keccak256\":\"0xe3aab21deaf0ce1c795f164630a6e495649779342e0f1f480efac4ff53bb0619\",\"license\":\"GPL-2.0-or-later\"},\"submodules/v2-foundry/src/interfaces/IERC20Burnable.sol\":{\"content\":\"pragma solidity >=0.5.0;\\n\\nimport \\\"../../lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol\\\";\\n\\n/// @title  IERC20Burnable\\n/// @author Alchemix Finance\\ninterface IERC20Burnable is IERC20 {\\n    /// @notice Burns `amount` tokens from the balance of `msg.sender`.\\n    ///\\n    /// @param amount The amount of tokens to burn.\\n    ///\\n    /// @return If burning the tokens was successful.\\n    function burn(uint256 amount) external returns (bool);\\n\\n    /// @notice Burns `amount` tokens from `owner`'s balance.\\n    ///\\n    /// @param owner  The address to burn tokens from.\\n    /// @param amount The amount of tokens to burn.\\n    ///\\n    /// @return If burning the tokens was successful.\\n    function burnFrom(address owner, uint256 amount) external returns (bool);\\n}\",\"keccak256\":\"0x1ef68b8211ae0387d53a98d9ed818fed3991c029f58a4730467baa1cf6b22e58\"},\"submodules/v2-foundry/src/interfaces/IERC20Metadata.sol\":{\"content\":\"pragma solidity >=0.5.0;\\n\\n/// @title  IERC20Metadata\\n/// @author Alchemix Finance\\ninterface IERC20Metadata {\\n    /// @notice Gets the name of the token.\\n    ///\\n    /// @return The name.\\n    function name() external view returns (string memory);\\n\\n    /// @notice Gets the symbol of the token.\\n    ///\\n    /// @return The symbol.\\n    function symbol() external view returns (string memory);\\n\\n    /// @notice Gets the number of decimals that the token has.\\n    ///\\n    /// @return The number of decimals.\\n    function decimals() external view returns (uint8);\\n}\",\"keccak256\":\"0x2d5429bdf25a43d40c7e23f3e27dd595585f33b1aaed4aabe8e76e681e15702b\"},\"submodules/v2-foundry/src/interfaces/IERC20Mintable.sol\":{\"content\":\"pragma solidity >=0.5.0;\\n\\nimport \\\"../../lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol\\\";\\n\\n/// @title  IERC20Mintable\\n/// @author Alchemix Finance\\ninterface IERC20Mintable is IERC20 {\\n    /// @notice Mints `amount` tokens to `recipient`.\\n    ///\\n    /// @param recipient The address which will receive the minted tokens.\\n    /// @param amount    The amount of tokens to mint.\\n    function mint(address recipient, uint256 amount) external;\\n}\",\"keccak256\":\"0x072e557e7eff54ba828d410d96e7782931a634813bccc817dc8988979a435aeb\"},\"submodules/v2-foundry/src/interfaces/ITokenAdapter.sol\":{\"content\":\"pragma solidity >=0.5.0;\\n\\n/// @title  ITokenAdapter\\n/// @author Alchemix Finance\\ninterface ITokenAdapter {\\n    /// @notice Gets the current version.\\n    ///\\n    /// @return The version.\\n    function version() external view returns (string memory);\\n\\n    /// @notice Gets the address of the yield token that this adapter supports.\\n    ///\\n    /// @return The address of the yield token.\\n    function token() external view returns (address);\\n\\n    /// @notice Gets the address of the underlying token that the yield token wraps.\\n    ///\\n    /// @return The address of the underlying token.\\n    function underlyingToken() external view returns (address);\\n\\n    /// @notice Gets the number of underlying tokens that a single whole yield token is redeemable\\n    ///         for.\\n    ///\\n    /// @return The price.\\n    function price() external view returns (uint256);\\n\\n    /// @notice Wraps `amount` underlying tokens into the yield token.\\n    ///\\n    /// @param amount    The amount of the underlying token to wrap.\\n    /// @param recipient The address which will receive the yield tokens.\\n    ///\\n    /// @return amountYieldTokens The amount of yield tokens minted to `recipient`.\\n    function wrap(uint256 amount, address recipient)\\n        external\\n        returns (uint256 amountYieldTokens);\\n\\n    /// @notice Unwraps `amount` yield tokens into the underlying token.\\n    ///\\n    /// @param amount    The amount of yield-tokens to redeem.\\n    /// @param recipient The recipient of the resulting underlying-tokens.\\n    ///\\n    /// @return amountUnderlyingTokens The amount of underlying tokens unwrapped to `recipient`.\\n    function unwrap(uint256 amount, address recipient)\\n        external\\n        returns (uint256 amountUnderlyingTokens);\\n}\",\"keccak256\":\"0x98a839c3d1673e410d674c0fd05ff6d64203f9818224d4c3258e21d91b96460a\"},\"submodules/v2-foundry/src/interfaces/external/IWETH9.sol\":{\"content\":\"pragma solidity >=0.5.0;\\n\\nimport \\\"../../../lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol\\\";\\n\\nimport \\\"../IERC20Metadata.sol\\\";\\n\\n/// @title IWETH9\\ninterface IWETH9 is IERC20, IERC20Metadata {\\n  /// @notice Deposits `msg.value` ethereum into the contract and mints `msg.value` tokens.\\n  function deposit() external payable;\\n\\n  /// @notice Burns `amount` tokens to retrieve `amount` ethereum from the contract.\\n  ///\\n  /// @dev This version of WETH utilizes the `transfer` function which hard codes the amount of gas\\n  ///      that is allowed to be utilized to be exactly 2300 when receiving ethereum.\\n  ///\\n  /// @param amount The amount of tokens to burn.\\n  function withdraw(uint256 amount) external;\\n}\",\"keccak256\":\"0x6df1a375b5b39f03ee997b1509f296c9ff3e66a96afbbe6c5924d5b4ac74db31\"},\"submodules/v2-foundry/src/interfaces/external/curve/IStableSwap2Pool.sol\":{\"content\":\"// SPDX-License-Identifier: UNLICENSED\\npragma solidity >=0.5.0;\\n\\nuint256 constant N_COINS = 2;\\n\\ninterface IStableSwap2Pool {\\n    function coins(uint256 index) external view returns (address);\\n\\n    function A() external view returns (uint256);\\n\\n    function get_virtual_price() external view returns (uint256);\\n\\n    function calc_token_amount(\\n        uint256[N_COINS] calldata amounts,\\n        bool deposit\\n    ) external view returns (uint256 amount);\\n\\n    function add_liquidity(uint256[N_COINS] calldata amounts, uint256 minimumMintAmount) external;\\n\\n    function get_dy(int128 i, int128 j, uint256 dx) external view returns (uint256 dy);\\n\\n    function get_dy_underlying(int128 i, int128 j, uint256 dx) external view returns (uint256 dy);\\n\\n    function exchange(\\n        int128 i,\\n        int128 j,\\n        uint256 dx,\\n        uint256 minimumDy\\n    ) external payable returns (uint256);\\n\\n    function remove_liquidity(uint256 amount, uint256[N_COINS] calldata minimumAmounts) external;\\n\\n    function remove_liquidity_imbalance(\\n        uint256[N_COINS] calldata amounts,\\n        uint256 maximumBurnAmount\\n    ) external;\\n\\n    function calc_withdraw_one_coin(uint256 tokenAmount, int128 i) external view returns (uint256);\\n\\n    function remove_liquidity_one_coin(\\n        uint256 tokenAmount,\\n        int128 i,\\n        uint256 minimumAmount\\n    ) external;\\n}\",\"keccak256\":\"0x3c991839b85e32f8098f462843cb32d01d7dc5637e78010c3464216e3f2da960\",\"license\":\"UNLICENSED\"},\"submodules/v2-foundry/src/interfaces/external/frax/IFraxEth.sol\":{\"content\":\"pragma solidity >= 0.8.13;\\n\\ninterface IFraxEth {\\n    function burn(uint256 amount) external;\\n    \\n    function minter_mint(address m_address, uint256 m_amount) external;\\n\\n    function minter_burn_from(address b_address, uint256 b_amount) external;\\n}\",\"keccak256\":\"0x00aab8d00cc0a96fdbb3ca8ddfb43c1cfe44881a60e49738128861d977968e13\"},\"submodules/v2-foundry/src/interfaces/external/frax/IFraxMinter.sol\":{\"content\":\"pragma solidity >= 0.8.13;\\n\\ninterface IFraxMinter {\\n    function depositEther(uint256 amount) external;\\n    function submitAndDeposit(address recipient) external payable returns (uint256);\\n    function submit() external payable;\\n}\",\"keccak256\":\"0x1ae36bbe931d518b72f1c0a852a275a720d0cc1e5b60daee451e36354e805dec\"},\"submodules/v2-foundry/src/interfaces/external/frax/IStakedFraxEth.sol\":{\"content\":\"pragma solidity >= 0.8.13;\\n\\ninterface IStakedFraxEth {\\n    function convertToAssets(uint256 shares) external view returns (uint256);\\n\\n    function convertToShares(uint256 assets) external view returns (uint256);\\n\\n    function deposit(uint256 assets, address receiver) external returns (uint256);\\n\\n    function withdraw(uint256 assets, address receiver, address owner) external returns (uint256);\\n}\",\"keccak256\":\"0x57442b04ebe2a2331eec498df2e67b9733d0008fb0e3da1075031d5eed2f348e\"},\"submodules/v2-foundry/src/libraries/TokenUtils.sol\":{\"content\":\"pragma solidity ^0.8.13;\\n\\nimport \\\"../../lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol\\\";\\nimport \\\"../../lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Metadata.sol\\\";\\nimport \\\"../interfaces/IERC20Burnable.sol\\\";\\nimport \\\"../interfaces/IERC20Mintable.sol\\\";\\n\\n/// @title  TokenUtils\\n/// @author Alchemix Finance\\nlibrary TokenUtils {\\n    /// @notice An error used to indicate that a call to an ERC20 contract failed.\\n    ///\\n    /// @param target  The target address.\\n    /// @param success If the call to the token was a success.\\n    /// @param data    The resulting data from the call. This is error data when the call was not a success. Otherwise,\\n    ///                this is malformed data when the call was a success.\\n    error ERC20CallFailed(address target, bool success, bytes data);\\n\\n    /// @dev A safe function to get the decimals of an ERC20 token.\\n    ///\\n    /// @dev Reverts with a {CallFailed} error if execution of the query fails or returns an unexpected value.\\n    ///\\n    /// @param token The target token.\\n    ///\\n    /// @return The amount of decimals of the token.\\n    function expectDecimals(address token) internal view returns (uint8) {\\n        (bool success, bytes memory data) = token.staticcall(\\n            abi.encodeWithSelector(IERC20Metadata.decimals.selector)\\n        );\\n\\n        if (token.code.length == 0 || !success || data.length < 32) {\\n            revert ERC20CallFailed(token, success, data);\\n        }\\n\\n        return abi.decode(data, (uint8));\\n    }\\n\\n    /// @dev Gets the balance of tokens held by an account.\\n    ///\\n    /// @dev Reverts with a {CallFailed} error if execution of the query fails or returns an unexpected value.\\n    ///\\n    /// @param token   The token to check the balance of.\\n    /// @param account The address of the token holder.\\n    ///\\n    /// @return The balance of the tokens held by an account.\\n    function safeBalanceOf(address token, address account) internal view returns (uint256) {\\n        (bool success, bytes memory data) = token.staticcall(\\n            abi.encodeWithSelector(IERC20.balanceOf.selector, account)\\n        );\\n\\n        if (token.code.length == 0 || !success || data.length < 32) {\\n            revert ERC20CallFailed(token, success, data);\\n        }\\n\\n        return abi.decode(data, (uint256));\\n    }\\n\\n    /// @dev Transfers tokens to another address.\\n    ///\\n    /// @dev Reverts with a {CallFailed} error if execution of the transfer failed or returns an unexpected value.\\n    ///\\n    /// @param token     The token to transfer.\\n    /// @param recipient The address of the recipient.\\n    /// @param amount    The amount of tokens to transfer.\\n    function safeTransfer(address token, address recipient, uint256 amount) internal {\\n        (bool success, bytes memory data) = token.call(\\n            abi.encodeWithSelector(IERC20.transfer.selector, recipient, amount)\\n        );\\n\\n        if (token.code.length == 0 || !success || (data.length != 0 && !abi.decode(data, (bool)))) {\\n            revert ERC20CallFailed(token, success, data);\\n        }\\n    }\\n\\n    /// @dev Approves tokens for the smart contract.\\n    ///\\n    /// @dev Reverts with a {CallFailed} error if execution of the approval fails or returns an unexpected value.\\n    ///\\n    /// @param token   The token to approve.\\n    /// @param spender The contract to spend the tokens.\\n    /// @param value   The amount of tokens to approve.\\n    function safeApprove(address token, address spender, uint256 value) internal {\\n        (bool success, bytes memory data) = token.call(\\n            abi.encodeWithSelector(IERC20.approve.selector, spender, value)\\n        );\\n\\n        if (token.code.length == 0 || !success || (data.length != 0 && !abi.decode(data, (bool)))) {\\n            revert ERC20CallFailed(token, success, data);\\n        }\\n    }\\n\\n    /// @dev Transfer tokens from one address to another address.\\n    ///\\n    /// @dev Reverts with a {CallFailed} error if execution of the transfer fails or returns an unexpected value.\\n    ///\\n    /// @param token     The token to transfer.\\n    /// @param owner     The address of the owner.\\n    /// @param recipient The address of the recipient.\\n    /// @param amount    The amount of tokens to transfer.\\n    function safeTransferFrom(address token, address owner, address recipient, uint256 amount) internal {\\n        (bool success, bytes memory data) = token.call(\\n            abi.encodeWithSelector(IERC20.transferFrom.selector, owner, recipient, amount)\\n        );\\n\\n        if (token.code.length == 0 || !success || (data.length != 0 && !abi.decode(data, (bool)))) {\\n            revert ERC20CallFailed(token, success, data);\\n        }\\n    }\\n\\n    /// @dev Mints tokens to an address.\\n    ///\\n    /// @dev Reverts with a {CallFailed} error if execution of the mint fails or returns an unexpected value.\\n    ///\\n    /// @param token     The token to mint.\\n    /// @param recipient The address of the recipient.\\n    /// @param amount    The amount of tokens to mint.\\n    function safeMint(address token, address recipient, uint256 amount) internal {\\n        (bool success, bytes memory data) = token.call(\\n            abi.encodeWithSelector(IERC20Mintable.mint.selector, recipient, amount)\\n        );\\n\\n        if (token.code.length == 0 || !success || (data.length != 0 && !abi.decode(data, (bool)))) {\\n            revert ERC20CallFailed(token, success, data);\\n        }\\n    }\\n\\n    /// @dev Burns tokens.\\n    ///\\n    /// Reverts with a `CallFailed` error if execution of the burn fails or returns an unexpected value.\\n    ///\\n    /// @param token  The token to burn.\\n    /// @param amount The amount of tokens to burn.\\n    function safeBurn(address token, uint256 amount) internal {\\n        (bool success, bytes memory data) = token.call(\\n            abi.encodeWithSelector(IERC20Burnable.burn.selector, amount)\\n        );\\n\\n        if (token.code.length == 0 || !success || (data.length != 0 && !abi.decode(data, (bool)))) {\\n            revert ERC20CallFailed(token, success, data);\\n        }\\n    }\\n\\n    /// @dev Burns tokens from its total supply.\\n    ///\\n    /// @dev Reverts with a {CallFailed} error if execution of the burn fails or returns an unexpected value.\\n    ///\\n    /// @param token  The token to burn.\\n    /// @param owner  The owner of the tokens.\\n    /// @param amount The amount of tokens to burn.\\n    function safeBurnFrom(address token, address owner, uint256 amount) internal {\\n        (bool success, bytes memory data) = token.call(\\n            abi.encodeWithSelector(IERC20Burnable.burnFrom.selector, owner, amount)\\n        );\\n\\n        if (token.code.length == 0 || !success || (data.length != 0 && !abi.decode(data, (bool)))) {\\n            revert ERC20CallFailed(token, success, data);\\n        }\\n    }\\n}\",\"keccak256\":\"0xc5baa0feb362479be13700eafb1bc8eee1ab10cac51bc9b317b721b5d2dd228c\"}},\"version\":1}",
+  "bytecode": "0x6101806040526000805460ff191660011790553480156200001f57600080fd5b50604051620016e3380380620016e38339810160408190526200004291620000e3565b80516001600160a01b0390811660809081526020830151821660a090815260c0808501516001600160801b039081166101405260e080870151909116610160526040860151851690915260608501518416905290830151821661010052909101511661012052620001c7565b80516001600160a01b0381168114620000c657600080fd5b919050565b80516001600160801b0381168114620000c657600080fd5b6000610100808385031215620000f857600080fd5b604051908101906001600160401b03821181831017156200012957634e487b7160e01b600052604160045260246000fd5b816040526200013884620000ae565b81526200014860208501620000ae565b60208201526200015b60408501620000ae565b60408201526200016e60608501620000ae565b60608201526200018160808501620000ae565b60808201526200019460a08501620000ae565b60a0820152620001a760c08501620000cb565b60c0820152620001ba60e08501620000cb565b60e0820152949350505050565b60805160a05160c05160e05161010051610120516101405161016051611409620002da6000396000818161027d0152610b0e0152600081816103300152610b3901526000818160bb015281816102490152818161047b015281816104b801528181610beb0152610c62015260008181610364015281816105330152818161063e015281816106bb0152818161085d01528181610a3d0152610ab90152600081816103e1015281816106dc015281816107270152818161081e015281816108d4015281816109060152610ca801526000818161019601526105ab01526000818160ef0152818161021501528181610ada0152610b720152600081816103980152818161041801526107bb01526114096000f3fe6080604052600436106100ab5760003560e01c80637647691d116100645780637647691d146102fe57806376fa81d61461031e57806380a54001146103525780638de925f614610386578063a035b1fe146103ba578063fc0c546a146103cf57600080fd5b8063075461721461018457806313bac820146101d5578063218751b2146102035780632495a599146102375780633851c6af1461026b57806354fd4d50146102c057600080fd5b3661017f57336001600160a01b037f000000000000000000000000000000000000000000000000000000000000000016148015906101125750336001600160a01b037f00000000000000000000000000000000000000000000000000000000000000001614155b1561017d5760405163973d02cb60e01b815260206004820152602f60248201527f5061796d656e7473206f6e6c79207065726d69747465642066726f6d2057455460448201526e12081bdc8818dd5c9d99481c1bdbdb608a1b60648201526084015b60405180910390fd5b005b600080fd5b34801561019057600080fd5b506101b87f000000000000000000000000000000000000000000000000000000000000000081565b6040516001600160a01b0390911681526020015b60405180910390f35b3480156101e157600080fd5b506101f56101f03660046110fb565b610403565b6040519081526020016101cc565b34801561020f57600080fd5b506101b87f000000000000000000000000000000000000000000000000000000000000000081565b34801561024357600080fd5b506101b87f000000000000000000000000000000000000000000000000000000000000000081565b34801561027757600080fd5b5061029f7f000000000000000000000000000000000000000000000000000000000000000081565b6040516fffffffffffffffffffffffffffffffff90911681526020016101cc565b3480156102cc57600080fd5b506102f1604051806040016040528060058152602001640312e302e360dc1b81525081565b6040516101cc9190611193565b34801561030a57600080fd5b506101f56103193660046110fb565b6107a6565b34801561032a57600080fd5b5061029f7f000000000000000000000000000000000000000000000000000000000000000081565b34801561035e57600080fd5b506101b87f000000000000000000000000000000000000000000000000000000000000000081565b34801561039257600080fd5b506101b87f000000000000000000000000000000000000000000000000000000000000000081565b3480156103c657600080fd5b506101f5610c88565b3480156103db57600080fd5b506101b87f000000000000000000000000000000000000000000000000000000000000000081565b600061040d610d20565b336001600160a01b037f000000000000000000000000000000000000000000000000000000000000000016146104765760405163973d02cb60e01b815260206004820152600d60248201526c139bdd08185b18da195b5a5cdd609a1b6044820152606401610174565b6104a27f0000000000000000000000000000000000000000000000000000000000000000333086610d95565b604051632e1a7d4d60e01b8152600481018490527f00000000000000000000000000000000000000000000000000000000000000006001600160a01b031690632e1a7d4d90602401600060405180830381600087803b15801561050457600080fd5b505af1158015610518573d6000803e3d6000fd5b50506040516370a0823160e01b8152306004820152600092507f00000000000000000000000000000000000000000000000000000000000000006001600160a01b031691506370a0823190602401602060405180830381865afa158015610583573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906105a791906111ad565b90507f00000000000000000000000000000000000000000000000000000000000000006001600160a01b0316635bcb2fc6856040518263ffffffff1660e01b81526004016000604051808303818588803b15801561060457600080fd5b505af1158015610618573d6000803e3d6000fd5b50506040516370a0823160e01b8152306004820152600093508492506001600160a01b037f00000000000000000000000000000000000000000000000000000000000000001691506370a0823190602401602060405180830381865afa158015610686573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906106aa91906111ad565b6106b491906111dc565b90506107017f00000000000000000000000000000000000000000000000000000000000000007f000000000000000000000000000000000000000000000000000000000000000083610eaa565b604051636e553f6560e01b8152600481018290526001600160a01b0385811660248301527f00000000000000000000000000000000000000000000000000000000000000001690636e553f65906044016020604051808303816000875af1158015610770573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061079491906111ad565b925050506107a0610fc7565b92915050565b60006107b0610d20565b336001600160a01b037f000000000000000000000000000000000000000000000000000000000000000016146108195760405163973d02cb60e01b815260206004820152600d60248201526c139bdd08185b18da195b5a5cdd609a1b6044820152606401610174565b6108457f0000000000000000000000000000000000000000000000000000000000000000333086610d95565b6040516370a0823160e01b81523060048201526000907f00000000000000000000000000000000000000000000000000000000000000006001600160a01b0316906370a0823190602401602060405180830381865afa1580156108ac573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906108d091906111ad565b90507f00000000000000000000000000000000000000000000000000000000000000006001600160a01b031663b460af9461092a7f0000000000000000000000000000000000000000000000000000000000000000610fda565b61093590600a6112d7565b306001600160a01b031663a035b1fe6040518163ffffffff1660e01b8152600401602060405180830381865afa158015610973573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061099791906111ad565b6109a190886112e6565b6109ab9190611305565b6040516001600160e01b031960e084901b1681526004810191909152306024820181905260448201526064016020604051808303816000875af11580156109f6573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610a1a91906111ad565b506040516370a0823160e01b815230600482015260009082906001600160a01b037f000000000000000000000000000000000000000000000000000000000000000016906370a0823190602401602060405180830381865afa158015610a84573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610aa891906111ad565b610ab291906111dc565b9050610aff7f00000000000000000000000000000000000000000000000000000000000000007f000000000000000000000000000000000000000000000000000000000000000083610eaa565b604051630f7c084960e21b81527f0000000000000000000000000000000000000000000000000000000000000000600f90810b60048301527f0000000000000000000000000000000000000000000000000000000000000000900b602482015260448101829052600060648201819052907f00000000000000000000000000000000000000000000000000000000000000006001600160a01b031690633df02124906084016020604051808303816000875af1158015610bc3573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610be791906111ad565b90507f00000000000000000000000000000000000000000000000000000000000000006001600160a01b031663d0e30db0826040518263ffffffff1660e01b81526004016000604051808303818588803b158015610c4457600080fd5b505af1158015610c58573d6000803e3d6000fd5b50505050506107947f000000000000000000000000000000000000000000000000000000000000000086836110c8565b6040516303d1689d60e11b8152670de0b6b3a764000060048201526000907f00000000000000000000000000000000000000000000000000000000000000006001600160a01b0316906307a2d13a90602401602060405180830381865afa158015610cf7573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610d1b91906111ad565b905090565b600160005460ff166002811115610d3957610d39611327565b14610d7e5760405163c50656df60e01b8152602060048201526014602482015273131bd8dac8185b1c9958591e4818db185a5b595960621b6044820152606401610174565b600080546002919060ff19166001835b0217905550565b604080516001600160a01b0385811660248301528481166044830152606480830185905283518084039091018152608490920183526020820180516001600160e01b03166323b872dd60e01b1790529151600092839290881691610df9919061133d565b6000604051808303816000865af19150503d8060008114610e36576040519150601f19603f3d011682016040523d82523d6000602084013e610e3b565b606091505b5091509150856001600160a01b03163b60001480610e57575081155b80610e7e5750805115801590610e7e575080806020019051810190610e7c9190611359565b155b15610ea25785828260405163e7e40b5b60e01b81526004016101749392919061137b565b505050505050565b6040516001600160a01b03838116602483015260448201839052600091829186169063095ea7b360e01b906064015b60408051601f198184030181529181526020820180516001600160e01b03166001600160e01b0319909416939093179092529051610f17919061133d565b6000604051808303816000865af19150503d8060008114610f54576040519150601f19603f3d011682016040523d82523d6000602084013e610f59565b606091505b5091509150846001600160a01b03163b60001480610f75575081155b80610f9c5750805115801590610f9c575080806020019051810190610f9a9190611359565b155b15610fc05784828260405163e7e40b5b60e01b81526004016101749392919061137b565b5050505050565b600080546001919060ff19168280610d8e565b60408051600481526024810182526020810180516001600160e01b031663313ce56760e01b1790529051600091829182916001600160a01b03861691611020919061133d565b600060405180830381855afa9150503d806000811461105b576040519150601f19603f3d011682016040523d82523d6000602084013e611060565b606091505b5091509150836001600160a01b03163b6000148061107c575081155b80611088575060208151105b156110ac5783828260405163e7e40b5b60e01b81526004016101749392919061137b565b808060200190518101906110c091906113b0565b949350505050565b6040516001600160a01b03838116602483015260448201839052600091829186169063a9059cbb60e01b90606401610ed9565b6000806040838503121561110e57600080fd5b8235915060208301356001600160a01b038116811461112c57600080fd5b809150509250929050565b60005b8381101561115257818101518382015260200161113a565b83811115611161576000848401525b50505050565b6000815180845261117f816020860160208601611137565b601f01601f19169290920160200192915050565b6020815260006111a66020830184611167565b9392505050565b6000602082840312156111bf57600080fd5b5051919050565b634e487b7160e01b600052601160045260246000fd5b6000828210156111ee576111ee6111c6565b500390565b600181815b8085111561122e578160001904821115611214576112146111c6565b8085161561122157918102915b93841c93908002906111f8565b509250929050565b600082611245575060016107a0565b81611252575060006107a0565b816001811461126857600281146112725761128e565b60019150506107a0565b60ff841115611283576112836111c6565b50506001821b6107a0565b5060208310610133831016604e8410600b84101617156112b1575081810a6107a0565b6112bb83836111f3565b80600019048211156112cf576112cf6111c6565b029392505050565b60006111a660ff841683611236565b6000816000190483118215151615611300576113006111c6565b500290565b60008261132257634e487b7160e01b600052601260045260246000fd5b500490565b634e487b7160e01b600052602160045260246000fd5b6000825161134f818460208701611137565b9190910192915050565b60006020828403121561136b57600080fd5b815180151581146111a657600080fd5b6001600160a01b038416815282151560208201526060604082018190526000906113a790830184611167565b95945050505050565b6000602082840312156113c257600080fd5b815160ff811681146111a657600080fdfea264697066735822122022a991297aa8ced3b9bcb722e823dc162722c84f77bfa479ed2426192551f21f64736f6c634300080d0033",
+  "deployedBytecode": "0x6080604052600436106100ab5760003560e01c80637647691d116100645780637647691d146102fe57806376fa81d61461031e57806380a54001146103525780638de925f614610386578063a035b1fe146103ba578063fc0c546a146103cf57600080fd5b8063075461721461018457806313bac820146101d5578063218751b2146102035780632495a599146102375780633851c6af1461026b57806354fd4d50146102c057600080fd5b3661017f57336001600160a01b037f000000000000000000000000000000000000000000000000000000000000000016148015906101125750336001600160a01b037f00000000000000000000000000000000000000000000000000000000000000001614155b1561017d5760405163973d02cb60e01b815260206004820152602f60248201527f5061796d656e7473206f6e6c79207065726d69747465642066726f6d2057455460448201526e12081bdc8818dd5c9d99481c1bdbdb608a1b60648201526084015b60405180910390fd5b005b600080fd5b34801561019057600080fd5b506101b87f000000000000000000000000000000000000000000000000000000000000000081565b6040516001600160a01b0390911681526020015b60405180910390f35b3480156101e157600080fd5b506101f56101f03660046110fb565b610403565b6040519081526020016101cc565b34801561020f57600080fd5b506101b87f000000000000000000000000000000000000000000000000000000000000000081565b34801561024357600080fd5b506101b87f000000000000000000000000000000000000000000000000000000000000000081565b34801561027757600080fd5b5061029f7f000000000000000000000000000000000000000000000000000000000000000081565b6040516fffffffffffffffffffffffffffffffff90911681526020016101cc565b3480156102cc57600080fd5b506102f1604051806040016040528060058152602001640312e302e360dc1b81525081565b6040516101cc9190611193565b34801561030a57600080fd5b506101f56103193660046110fb565b6107a6565b34801561032a57600080fd5b5061029f7f000000000000000000000000000000000000000000000000000000000000000081565b34801561035e57600080fd5b506101b87f000000000000000000000000000000000000000000000000000000000000000081565b34801561039257600080fd5b506101b87f000000000000000000000000000000000000000000000000000000000000000081565b3480156103c657600080fd5b506101f5610c88565b3480156103db57600080fd5b506101b87f000000000000000000000000000000000000000000000000000000000000000081565b600061040d610d20565b336001600160a01b037f000000000000000000000000000000000000000000000000000000000000000016146104765760405163973d02cb60e01b815260206004820152600d60248201526c139bdd08185b18da195b5a5cdd609a1b6044820152606401610174565b6104a27f0000000000000000000000000000000000000000000000000000000000000000333086610d95565b604051632e1a7d4d60e01b8152600481018490527f00000000000000000000000000000000000000000000000000000000000000006001600160a01b031690632e1a7d4d90602401600060405180830381600087803b15801561050457600080fd5b505af1158015610518573d6000803e3d6000fd5b50506040516370a0823160e01b8152306004820152600092507f00000000000000000000000000000000000000000000000000000000000000006001600160a01b031691506370a0823190602401602060405180830381865afa158015610583573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906105a791906111ad565b90507f00000000000000000000000000000000000000000000000000000000000000006001600160a01b0316635bcb2fc6856040518263ffffffff1660e01b81526004016000604051808303818588803b15801561060457600080fd5b505af1158015610618573d6000803e3d6000fd5b50506040516370a0823160e01b8152306004820152600093508492506001600160a01b037f00000000000000000000000000000000000000000000000000000000000000001691506370a0823190602401602060405180830381865afa158015610686573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906106aa91906111ad565b6106b491906111dc565b90506107017f00000000000000000000000000000000000000000000000000000000000000007f000000000000000000000000000000000000000000000000000000000000000083610eaa565b604051636e553f6560e01b8152600481018290526001600160a01b0385811660248301527f00000000000000000000000000000000000000000000000000000000000000001690636e553f65906044016020604051808303816000875af1158015610770573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061079491906111ad565b925050506107a0610fc7565b92915050565b60006107b0610d20565b336001600160a01b037f000000000000000000000000000000000000000000000000000000000000000016146108195760405163973d02cb60e01b815260206004820152600d60248201526c139bdd08185b18da195b5a5cdd609a1b6044820152606401610174565b6108457f0000000000000000000000000000000000000000000000000000000000000000333086610d95565b6040516370a0823160e01b81523060048201526000907f00000000000000000000000000000000000000000000000000000000000000006001600160a01b0316906370a0823190602401602060405180830381865afa1580156108ac573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906108d091906111ad565b90507f00000000000000000000000000000000000000000000000000000000000000006001600160a01b031663b460af9461092a7f0000000000000000000000000000000000000000000000000000000000000000610fda565b61093590600a6112d7565b306001600160a01b031663a035b1fe6040518163ffffffff1660e01b8152600401602060405180830381865afa158015610973573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061099791906111ad565b6109a190886112e6565b6109ab9190611305565b6040516001600160e01b031960e084901b1681526004810191909152306024820181905260448201526064016020604051808303816000875af11580156109f6573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610a1a91906111ad565b506040516370a0823160e01b815230600482015260009082906001600160a01b037f000000000000000000000000000000000000000000000000000000000000000016906370a0823190602401602060405180830381865afa158015610a84573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610aa891906111ad565b610ab291906111dc565b9050610aff7f00000000000000000000000000000000000000000000000000000000000000007f000000000000000000000000000000000000000000000000000000000000000083610eaa565b604051630f7c084960e21b81527f0000000000000000000000000000000000000000000000000000000000000000600f90810b60048301527f0000000000000000000000000000000000000000000000000000000000000000900b602482015260448101829052600060648201819052907f00000000000000000000000000000000000000000000000000000000000000006001600160a01b031690633df02124906084016020604051808303816000875af1158015610bc3573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610be791906111ad565b90507f00000000000000000000000000000000000000000000000000000000000000006001600160a01b031663d0e30db0826040518263ffffffff1660e01b81526004016000604051808303818588803b158015610c4457600080fd5b505af1158015610c58573d6000803e3d6000fd5b50505050506107947f000000000000000000000000000000000000000000000000000000000000000086836110c8565b6040516303d1689d60e11b8152670de0b6b3a764000060048201526000907f00000000000000000000000000000000000000000000000000000000000000006001600160a01b0316906307a2d13a90602401602060405180830381865afa158015610cf7573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610d1b91906111ad565b905090565b600160005460ff166002811115610d3957610d39611327565b14610d7e5760405163c50656df60e01b8152602060048201526014602482015273131bd8dac8185b1c9958591e4818db185a5b595960621b6044820152606401610174565b600080546002919060ff19166001835b0217905550565b604080516001600160a01b0385811660248301528481166044830152606480830185905283518084039091018152608490920183526020820180516001600160e01b03166323b872dd60e01b1790529151600092839290881691610df9919061133d565b6000604051808303816000865af19150503d8060008114610e36576040519150601f19603f3d011682016040523d82523d6000602084013e610e3b565b606091505b5091509150856001600160a01b03163b60001480610e57575081155b80610e7e5750805115801590610e7e575080806020019051810190610e7c9190611359565b155b15610ea25785828260405163e7e40b5b60e01b81526004016101749392919061137b565b505050505050565b6040516001600160a01b03838116602483015260448201839052600091829186169063095ea7b360e01b906064015b60408051601f198184030181529181526020820180516001600160e01b03166001600160e01b0319909416939093179092529051610f17919061133d565b6000604051808303816000865af19150503d8060008114610f54576040519150601f19603f3d011682016040523d82523d6000602084013e610f59565b606091505b5091509150846001600160a01b03163b60001480610f75575081155b80610f9c5750805115801590610f9c575080806020019051810190610f9a9190611359565b155b15610fc05784828260405163e7e40b5b60e01b81526004016101749392919061137b565b5050505050565b600080546001919060ff19168280610d8e565b60408051600481526024810182526020810180516001600160e01b031663313ce56760e01b1790529051600091829182916001600160a01b03861691611020919061133d565b600060405180830381855afa9150503d806000811461105b576040519150601f19603f3d011682016040523d82523d6000602084013e611060565b606091505b5091509150836001600160a01b03163b6000148061107c575081155b80611088575060208151105b156110ac5783828260405163e7e40b5b60e01b81526004016101749392919061137b565b808060200190518101906110c091906113b0565b949350505050565b6040516001600160a01b03838116602483015260448201839052600091829186169063a9059cbb60e01b90606401610ed9565b6000806040838503121561110e57600080fd5b8235915060208301356001600160a01b038116811461112c57600080fd5b809150509250929050565b60005b8381101561115257818101518382015260200161113a565b83811115611161576000848401525b50505050565b6000815180845261117f816020860160208601611137565b601f01601f19169290920160200192915050565b6020815260006111a66020830184611167565b9392505050565b6000602082840312156111bf57600080fd5b5051919050565b634e487b7160e01b600052601160045260246000fd5b6000828210156111ee576111ee6111c6565b500390565b600181815b8085111561122e578160001904821115611214576112146111c6565b8085161561122157918102915b93841c93908002906111f8565b509250929050565b600082611245575060016107a0565b81611252575060006107a0565b816001811461126857600281146112725761128e565b60019150506107a0565b60ff841115611283576112836111c6565b50506001821b6107a0565b5060208310610133831016604e8410600b84101617156112b1575081810a6107a0565b6112bb83836111f3565b80600019048211156112cf576112cf6111c6565b029392505050565b60006111a660ff841683611236565b6000816000190483118215151615611300576113006111c6565b500290565b60008261132257634e487b7160e01b600052601260045260246000fd5b500490565b634e487b7160e01b600052602160045260246000fd5b6000825161134f818460208701611137565b9190910192915050565b60006020828403121561136b57600080fd5b815180151581146111a657600080fd5b6001600160a01b038416815282151560208201526060604082018190526000906113a790830184611167565b95945050505050565b6000602082840312156113c257600080fd5b815160ff811681146111a657600080fdfea264697066735822122022a991297aa8ced3b9bcb722e823dc162722c84f77bfa479ed2426192551f21f64736f6c634300080d0033",
+  "devdoc": {
+    "author": "Alchemix Finance",
+    "errors": {
+      "ERC20CallFailed(address,bool,bytes)": [
+        {
+          "params": {
+            "data": "The resulting data from the call. This is error data when the call was not a success. Otherwise,                this is malformed data when the call was a success.",
+            "success": "If the call to the token was a success.",
+            "target": "The target address."
+          }
+        }
+      ],
+      "IllegalState(string)": [
+        {
+          "params": {
+            "message": "The error message."
+          }
+        }
+      ],
+      "Unauthorized(string)": [
+        {
+          "params": {
+            "message": "The error message."
+          }
+        }
+      ]
+    },
+    "kind": "dev",
+    "methods": {
+      "price()": {
+        "returns": {
+          "_0": "The price."
+        }
+      },
+      "unwrap(uint256,address)": {
+        "params": {
+          "amount": "The amount of yield-tokens to redeem.",
+          "recipient": "The recipient of the resulting underlying-tokens."
+        },
+        "returns": {
+          "_0": "The amount of underlying tokens unwrapped to `recipient`."
+        }
+      },
+      "wrap(uint256,address)": {
+        "params": {
+          "amount": "The amount of the underlying token to wrap.",
+          "recipient": "The address which will receive the yield tokens."
+        },
+        "returns": {
+          "_0": "The amount of yield tokens minted to `recipient`."
+        }
+      }
+    },
+    "stateVariables": {
+      "token": {
+        "return": "The address of the yield token.",
+        "returns": {
+          "_0": "The address of the yield token."
+        }
+      },
+      "underlyingToken": {
+        "return": "The address of the underlying token.",
+        "returns": {
+          "_0": "The address of the underlying token."
+        }
+      },
+      "version": {
+        "return": "The version.",
+        "returns": {
+          "_0": "The version."
+        }
+      }
+    },
+    "title": "FraxEthAdapter",
+    "version": 1
+  },
+  "userdoc": {
+    "errors": {
+      "ERC20CallFailed(address,bool,bytes)": [
+        {
+          "notice": "An error used to indicate that a call to an ERC20 contract failed."
+        }
+      ],
+      "IllegalState(string)": [
+        {
+          "notice": "An error used to indicate that a function has encountered an unrecoverable state."
+        }
+      ],
+      "Unauthorized(string)": [
+        {
+          "notice": "An error used to indicate that a message sender tried to execute a privileged function."
+        }
+      ]
+    },
+    "kind": "user",
+    "methods": {
+      "price()": {
+        "notice": "Gets the number of underlying tokens that a single whole yield token is redeemable         for."
+      },
+      "token()": {
+        "notice": "Gets the address of the yield token that this adapter supports."
+      },
+      "underlyingToken()": {
+        "notice": "Gets the address of the underlying token that the yield token wraps."
+      },
+      "unwrap(uint256,address)": {
+        "notice": "Unwraps `amount` yield tokens into the underlying token."
+      },
+      "version()": {
+        "notice": "Gets the current version."
+      },
+      "wrap(uint256,address)": {
+        "notice": "Wraps `amount` underlying tokens into the yield token."
+      }
+    },
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 51350,
+        "contract": "submodules/v2-foundry/src/adapters/frax/FraxEthAdapter.sol:FraxEthAdapter",
+        "label": "_lockState",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_enum(State)51344"
+      }
+    ],
+    "types": {
+      "t_enum(State)51344": {
+        "encoding": "inplace",
+        "label": "enum MutexLock.State",
+        "numberOfBytes": "1"
+      }
+    }
+  }
+}
