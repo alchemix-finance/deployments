@@ -1,5 +1,5 @@
 {
-  "address": "0x3216D2A52f0094AA860ca090BC5C335dE36e6273",
+  "address": "0xcAd336723c356844DD213121b377813a20561780",
   "abi": [
     {
       "inputs": [],
@@ -112,6 +112,19 @@
     {
       "inputs": [],
       "name": "delegateRegistry",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "gaugeController",
       "outputs": [
         {
           "internalType": "address",
@@ -249,6 +262,19 @@
       "inputs": [
         {
           "internalType": "address",
+          "name": "_gaugeController",
+          "type": "address"
+        }
+      ],
+      "name": "setGaugeController",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
           "name": "_rewardDistributor",
           "type": "address"
         }
@@ -326,6 +352,24 @@
         }
       ],
       "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "gaugeAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "weight",
+          "type": "uint256"
+        }
+      ],
+      "name": "voteForGaugeWeights",
+      "outputs": [],
+      "stateMutability": "nonpayable",
       "type": "function"
     }
   ]
