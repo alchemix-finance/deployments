@@ -284,6 +284,7 @@
       "harvest(address,address,uint256)": {
         "params": {
           "alchemist": "The address of the target alchemist.",
+          "expectedRewardsExchange": "The minimum VSP to debt tokens.",
           "minimumAmountOut": "The minimum amount of tokens expected to be harvested.",
           "yieldToken": "The address of the target yield token."
         }
